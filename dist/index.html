@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Esparza Brothers LLC | Custom Homes & Construction</title>
+
+  <meta name="description" content="Esparza Brothers LLC provides custom home building, residential construction, and insulation services. Contact us today for an estimate.">
+
+  <style>
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17222d;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* =========================
+       COLORS
+    ========================= */
+
+    :root {
+      --dark: #101820;
+      --navy: #172633;
+      --gold: #c89445;
+      --gold-light: #e0b66f;
+      --cream: #f5f3ee;
+      --gray: #68727a;
+      --white: #ffffff;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 25px 0;
+      color: white;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--gold-light);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-button {
+      background: var(--gold);
+      padding: 11px 18px;
+      border-radius: 4px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      color: white;
+      position: relative;
+
+      background:
+        linear-gradient(
+          rgba(10,18,25,.78),
+          rgba(10,18,25,.82)
+        ),
+        linear-gradient(
+          135deg,
+          #69747c,
+          #1c2933
+        );
+    }
+
+    .hero-content {
+      max-width: 780px;
+      padding-top: 60px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: 1.02;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.15rem;
+      color: #e3e7e9;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.6);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--dark);
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================= */
+
+    .trust {
+      background: var(--navy);
+      color: white;
+      padding: 28px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      gap: 20px;
+    }
+
+    .trust strong {
+      display: block;
+      color: var(--gold-light);
+      margin-bottom: 3px;
+    }
+
+    .trust span {
+      font-size: .85rem;
+      color: #c8ced2;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: var(--cream);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 38px;
+      border-bottom: 4px solid transparent;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: .95rem;
+    }
+
+    .insulation-card {
+      border-top: 4px solid var(--gold);
+    }
+
+    .insulation-name {
+      color: var(--gold);
+      font-size: .85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 480px;
+
+      background:
+        linear-gradient(
+          rgba(23,34,45,.15),
+          rgba(23,34,45,.15)
+        ),
+        linear-gradient(
+          135deg,
+          #b9b2a5,
+          #64717a
+        );
+
+      position: relative;
+    }
+
+    .about-image::after {
+      content: "ESPARZA BROTHERS LLC";
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      color: white;
+      font-size: .75rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .about-text h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    /* =========================
+       INSULATION SECTION
+    ========================= */
+
+    .insulation-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .insulation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .insulation-section .section-heading p {
+      color: #c4cbd0;
+    }
+
+    .insulation-box {
+      border: 1px solid #46515a;
+      padding: 40px;
+    }
+
+    .insulation-box h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .insulation-box p {
+      color: #c4cbd0;
+      margin-bottom: 25px;
+    }
+
+    .insulation-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .insulation-list li {
+      margin-bottom: 12px;
+    }
+
+    .insulation-list li::before {
+      content: "✓";
+      color: var(--gold-light);
+      margin-right: 10px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+      background: var(--navy);
+      color: white;
+    }
+
+    .process .section-heading p {
+      color: #c0c7cc;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .process-step {
+      border-top: 1px solid #4b5861;
+      padding-top: 25px;
+    }
+
+    .process-step span {
+      color: var(--gold-light);
+      font-size: .8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .process-step h3 {
+      margin: 12px 0 8px;
+    }
+
+    .process-step p {
+      color: #c0c7cc;
+      font-size: .9rem;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      background: var(--cream);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-template-rows: 230px 230px;
+      gap: 18px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          #858d91,
+          #29353d
+        );
+    }
+
+    .project:first-child {
+      grid-row: span 2;
+      background:
+        linear-gradient(
+          135deg,
+          #68747c,
+          #202b34
+        );
+    }
+
+    .project-label {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.8)
+      );
+    }
+
+    .project-label strong {
+      display: block;
+    }
+
+    .project-label span {
+      font-size: .8rem;
+      color: #ddd;
+    }
+
+    /* =========================
+       CALL TO ACTION
+    ========================= */
+
+    .cta {
+      background: var(--gold);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #fff7eb;
+    }
+
+    .cta .btn {
+      background: var(--dark);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .contact-info h2 {
+      font-size: 2.8rem;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .contact-info p {
+      color: var(--gray);
+      margin-bottom: 30px;
+    }
+
+    .contact-detail {
+      margin-bottom: 20px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .75rem;
+      margin-bottom: 4px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #d5d8da;
+      border-radius: 3px;
+      font: inherit;
+      color: var(--dark);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid var(--gold);
+      border-color: transparent;
+    }
+
+    form button {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark);
+      color: #9fa7ad;
+      padding: 35px 0;
+      font-size: .85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .trust-grid,
+      .service-grid,
+      .about-grid,
+      .insulation-grid,
+      .process-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 350px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 220px);
+      }
+
+      .project:first-child {
+        grid-row: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        ESPARZA <span>BROTHERS</span> LLC
+      </a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-button">
+            Request an Estimate
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Custom Homes • Residential Construction • Insulation
+        </div>
+
+        <h1>
+          Built for the way you live.
+        </h1>
+
+        <p>
+          Esparza Brothers LLC provides custom home building and
+          residential construction, while Esparza Brothers Insulation
+          provides professional insulation services for your home.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#contact" class="btn btn-primary">
+            Request an Estimate
+          </a>
+
+          <a href="#services" class="btn btn-outline">
+            Our Services
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       TRUST BAR
+  ========================= -->
+
+  <div class="trust">
+
+    <div class="container trust-grid">
+
+      <div>
+        <strong>Custom Homes</strong>
+        <span>Built around your vision</span>
+      </div>
+
+      <div>
+        <strong>Residential Construction</strong>
+        <span>Quality workmanship</span>
+      </div>
+
+      <div>
+        <strong>ESPARZA BROTHERS INSULATION</strong>
+        <span>Comfort & energy efficiency</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          What We Do
+        </div>
+
+        <h2>
+          Quality work. Built to last.
+        </h2>
+
+        <p>
+          Esparza Brothers LLC provides custom home building and
+          residential construction, with professional insulation
+          services available through Esparza Brothers Insulation.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+
+        <!-- SERVICE 1 -->
+
+        <div class="service-card">
+
+          <div class="service-number">
+            01
+          </div>
+
+          <h3>
+            Custom Home Building
+          </h3>
+
+          <p>
+            Build a home designed around your lifestyle,
+            priorities, and vision from the ground up.
+          </p>
+
+        </div>
+
+
+        <!-- SERVICE 2 -->
+
+        <div class="service-card">
+
+          <div class="service-number">
+            02
+          </div>
+
+          <h3>
+            Residential Construction
+          </h3>
+
+          <p>
+            Reliable residential construction with attention
+            to quality, communication, and detail.
+          </p>
+
+        </div>
+
+
+        <!-- SERVICE 3 -->
+
+        <div class="service-card">
+
+          <div class="service-number">
+            03
+          </div>
+
+          <h3>
+            Home Improvements
+          </h3>
+
+          <p>
+            Upgrade your existing home with thoughtful
+            construction and improvements built to last.
+          </p>
+
+        </div>
+
+
+        <!-- SERVICE 4 -->
+
+        <div class="service-card insulation-card">
+
+          <div class="service-number">
+            04
+          </div>
+
+          <div class="insulation-name">
+            ESPARZA BROTHERS INSULATION
+          </div>
+
+          <h3>
+            Insulation Services
+          </h3>
+
+          <p>
+            Professional insulation services designed to
+            improve comfort, energy efficiency, and the
+            overall performance of your home.
+          </p>
+
+          <br>
+
+          <a href="#contact" class="btn btn-primary">
+            Get an Insulation Quote
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about">
+
+    <div class="container about-grid">
+
+
+      <div class="about-image">
+      </div>
+
+
+      <div class="about-text">
+
+        <div class="eyebrow">
+          Why Choose Us
+        </div>
+
+        <h2>
+          Your home deserves to be built right.
+        </h2>
+
+        <p>
+          At Esparza Brothers LLC, we believe a home is more
+          than a structure. It's where your family lives,
+          grows, and creates memories.
+        </p>
+
+        <p>
+          That's why we approach every project with care,
+          craftsmanship, and attention to the details that
+          make a difference.
+        </p>
+
+
+        <ul class="check-list">
+
+          <li>
+            Quality-focused workmanship
+          </li>
+
+          <li>
+            Clear communication throughout the project
+          </li>
+
+          <li>
+            Custom solutions for every homeowner
+          </li>
+
+          <li>
+            Built with long-term value in mind
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INSULATION
+  ========================= -->
+
+  <section class="insulation-section">
+
+    <div class="container insulation-grid">
+
+
+      <div>
+
+        <div class="eyebrow">
+          A Separate Service
+        </div>
+
+        <div class="section-heading">
+
+          <h2>
+            ESPARZA BROTHERS INSULATION
+          </h2>
+
+          <p>
+            Helping homeowners create more comfortable and
+            efficient spaces with professional insulation services.
+          </p>
+
+        </div>
+
+        <a href="#contact" class="btn btn-primary">
+          Request an Insulation Quote
+        </a>
+
+      </div>
+
+
+      <div class="insulation-box">
+
+        <h3>
+          Insulation Services
+        </h3>
+
+        <p>
+          Talk with our team about your insulation project
+          and find the right solution for your home.
+        </p>
+
+        <ul class="insulation-list">
+
+          <li>
+            Residential insulation
+          </li>
+
+          <li>
+            New construction insulation
+          </li>
+
+          <li>
+            Home improvement projects
+          </li>
+
+          <li>
+            Comfort and energy-efficiency improvements
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Our Process
+        </div>
+
+        <h2>
+          A better building experience.
+        </h2>
+
+        <p>
+          We keep the process straightforward so you can
+          focus on the home you're creating.
+        </p>
+
+      </div>
+
+
+      <div class="process-grid">
+
+
+        <div class="process-step">
+
+          <span>
+            01 — DISCOVER
+          </span>
+
+          <h3>
+            Tell us your vision
+          </h3>
+
+          <p>
+            We learn about your goals, ideas, property,
+            and project.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <span>
+            02 — PLAN
+          </span>
+
+          <h3>
+            Create the plan
+          </h3>
+
+          <p>
+            We work through the details and develop
+            the right approach.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <span>
+            03 — BUILD
+          </span>
+
+          <h3>
+            Bring it to life
+          </h3>
+
+          <p>
+            Our team gets to work turning the plan
+            into reality.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <span>
+            04 — DELIVER
+          </span>
+
+          <h3>
+            Enjoy your home
+          </h3>
+
+          <p>
+            We finish the project with care so you
+            can enjoy the result.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="eyebrow">
+          Our Work
+        </div>
+
+        <h2>
+          Built with purpose.
+        </h2>
+
+        <p>
+          Add photos of your actual homes, construction
+          projects, and insulation work here.
+        </p>
+
+      </div>
+
+
+      <div class="project-grid">
+
+
+        <div class="project">
+
+          <div class="project-label">
+
+            <strong>
+              Custom Home
+            </strong>
+
+            <span>
+              Residential Construction
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-label">
+
+            <strong>
+              New Construction
+            </strong>
+
+            <span>
+              Custom Build
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-label">
+
+            <strong>
+              Insulation Project
+            </strong>
+
+            <span>
+              Esparza Brothers Insulation
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CALL TO ACTION
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to build something great?
+      </h2>
+
+      <p>
+        Tell us about your project and let's talk about
+        how Esparza Brothers LLC or Esparza Brothers
+        Insulation can help.
+      </p>
+
+      <a href="#contact" class="btn">
+        Start Your Project
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <div class="container contact-grid">
+
+
+      <div class="contact-info">
+
+        <div class="eyebrow">
+          Get In Touch
+        </div>
+
+        <h2>
+          Let's talk about your project.
+        </h2>
+
+        <p>
+          Have a custom home in mind? Need residential
+          construction or insulation work? Send us a
+          message and we'll get back to you.
+        </p>
+
+
+        <!-- CHANGE THESE TO YOUR REAL INFORMATION -->
+
+        <div class="contact-detail">
+
+          <strong>
+            Phone
+          </strong>
+
+          <span>
+            (682) 802-4828
+          </span>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <strong>
+            Email
+          </strong>
+
+          <span>
+            services@esparzabrothers.com
+          </span>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+          <strong>
+            Service Area
+          </strong>
+
+          <span>
+            Tulsa & Surrounding Areas
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT FORM -->
+
+      <form action="#" method="POST">
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+
+        <select name="project" required>
+
+          <option value="">
+            What can we help with?
+          </option>
+
+          <option>
+            Custom Home Building
+          </option>
+
+          <option>
+            Residential Construction
+          </option>
+
+          <option>
+            Home Improvements
+          </option>
+
+          <option>
+            ESPARZA BROTHERS INSULATION
+          </option>
+
+          <option>
+            Other
+          </option>
+
+        </select>
+
+
+        <textarea
+          name="message"
+          placeholder="Tell us a little about your project..."
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+          Request an Estimate
+        </button>
+
+      </form>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <strong>
+          ESPARZA BROTHERS LLC
+        </strong>
+
+        <br>
+
+        Custom Home Building & Residential Construction
+
+        <br><br>
+
+        <strong>
+          ESPARZA BROTHERS INSULATION
+        </strong>
+
+        <br>
+
+        Professional Insulation Services
+
+      </div>
+
+
+      <div>
+
+        © 2026 Esparza Brothers LLC.
+        All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
